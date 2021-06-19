@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Repository Listing View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RepositoryListingViewController" customModule="BitbucketPublicProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Ta-wY-Fi3">
+                                <rect key="frame" x="0.0" y="94" width="414" height="718"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RepositoryCell" rowHeight="115" id="cba-MT-hEf" customClass="RepositoryCell" customModule="BitbucketPublicProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="115"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cba-MT-hEf" id="pMf-eQ-zlO">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="115"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ivanvorobei/SwiftUI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ED1-6U-ob2">
+                                                    <rect key="frame" x="20" y="11" width="374" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" systemColor="systemBlueColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type : repository" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOl-hz-jpW">
+                                                    <rect key="frame" x="20" y="35" width="122" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created On : Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ya8-5U-suN">
+                                                    <rect key="frame" x="20" y="58" width="130" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Owner : Rich Manalang" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMF-Yc-Dn5">
+                                                    <rect key="frame" x="20" y="81" width="167" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X9p-cd-dZO">
+                                                    <rect key="frame" x="324" y="35" width="70" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="70" id="M10-JL-AyC"/>
+                                                        <constraint firstAttribute="width" constant="70" id="w1U-aP-Ywj"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="wMF-Yc-Dn5" firstAttribute="leading" secondItem="ED1-6U-ob2" secondAttribute="leading" id="7kh-T8-fhD"/>
+                                                <constraint firstItem="uOl-hz-jpW" firstAttribute="top" secondItem="ED1-6U-ob2" secondAttribute="bottom" constant="3" id="Dt8-OQ-6lD"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ED1-6U-ob2" secondAttribute="trailing" id="Fj5-RA-n8x"/>
+                                                <constraint firstItem="wMF-Yc-Dn5" firstAttribute="top" secondItem="Ya8-5U-suN" secondAttribute="bottom" constant="3" id="N01-Lw-0jL"/>
+                                                <constraint firstItem="X9p-cd-dZO" firstAttribute="trailing" secondItem="pMf-eQ-zlO" secondAttribute="trailingMargin" id="XWZ-Rn-vJf"/>
+                                                <constraint firstItem="ED1-6U-ob2" firstAttribute="leading" secondItem="pMf-eQ-zlO" secondAttribute="leadingMargin" id="YHN-BN-hUc"/>
+                                                <constraint firstItem="Ya8-5U-suN" firstAttribute="leading" secondItem="ED1-6U-ob2" secondAttribute="leading" id="d7m-c9-2kZ"/>
+                                                <constraint firstItem="uOl-hz-jpW" firstAttribute="leading" secondItem="ED1-6U-ob2" secondAttribute="leading" id="gQZ-z1-4WB"/>
+                                                <constraint firstItem="Ya8-5U-suN" firstAttribute="top" secondItem="uOl-hz-jpW" secondAttribute="bottom" constant="3" id="gkc-cO-deL"/>
+                                                <constraint firstItem="ED1-6U-ob2" firstAttribute="top" secondItem="pMf-eQ-zlO" secondAttribute="topMargin" id="gu0-R7-B1f"/>
+                                                <constraint firstItem="X9p-cd-dZO" firstAttribute="top" secondItem="uOl-hz-jpW" secondAttribute="top" id="jqF-fi-KlY"/>
+                                                <constraint firstAttribute="bottom" secondItem="X9p-cd-dZO" secondAttribute="bottom" constant="10" id="p3w-Xc-mrn"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="createdDateLabel" destination="Ya8-5U-suN" id="epb-m1-3yR"/>
+                                            <outlet property="ownerAvaterImageView" destination="X9p-cd-dZO" id="Bl2-LD-2ZZ"/>
+                                            <outlet property="ownerNameLabel" destination="wMF-Yc-Dn5" id="NOA-DC-Jk0"/>
+                                            <outlet property="repositoryFullNameLabel" destination="ED1-6U-ob2" id="CiV-rz-9Po"/>
+                                            <outlet property="typeLabel" destination="uOl-hz-jpW" id="rGN-uI-OQg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitbucket Public Repositories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="otX-bk-6hM">
+                                <rect key="frame" x="20" y="54" width="312.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXN-eL-UNT">
+                                <rect key="frame" x="191" y="832" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="NextButtonOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MXG-pZ-QgS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yXN-eL-UNT" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5S5-ba-VHn"/>
+                            <constraint firstItem="yXN-eL-UNT" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Phj-WS-Wx9"/>
+                            <constraint firstItem="otX-bk-6hM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="V4X-Ue-fgt"/>
+                            <constraint firstItem="6Ta-wY-Fi3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Wer-MK-dss"/>
+                            <constraint firstItem="6Ta-wY-Fi3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hbl-j3-QCO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Ta-wY-Fi3" secondAttribute="trailing" id="hxG-hO-Qtp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6Ta-wY-Fi3" secondAttribute="bottom" constant="50" id="vOx-Xz-G4R"/>
+                            <constraint firstItem="otX-bk-6hM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="yxu-bq-xje"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nextButton" destination="yXN-eL-UNT" id="c37-Nc-ccp"/>
+                        <outlet property="repositoryTableView" destination="6Ta-wY-Fi3" id="Ll2-aS-Ose"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="42.857142857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
