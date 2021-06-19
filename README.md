@@ -1,4 +1,10 @@
-# BitbucketRepo
+# iOS Swift App for Bitbucket Repo Listing 
 
-This project use the simple network call to retrieve the public repositories from Bitbucket.
-End point - https://api.bitbucket.org/2.0/repositories
+This project is the basic swift project using 
+* simple network call
+* simple project structure
+* simple unit testing
+ 
+
+Endpoint - https://api.bitbucket.org/2.0/repositories
+
