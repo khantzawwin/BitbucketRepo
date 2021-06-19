@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class RepositoryListingViewController: UIViewController {
 
@@ -67,7 +68,7 @@ extension RepositoryListingViewController: UITableViewDataSource, UITableViewDel
         let repository : Repository = repositories[indexPath.row]
         
         cell.setData(repository: repository)
-        
+        cell.selectionStyle = .none
         return cell
     }
     
@@ -77,6 +78,15 @@ extension RepositoryListingViewController: UITableViewDataSource, UITableViewDel
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let repository : Repository = repositories[indexPath.row]
+        
+        if let url = URL(string: repository.website) {
+            let vc = SFSafariViewController(url: url)
+            present(vc, animated: true, completion: nil)
+        }
     }
 }
 

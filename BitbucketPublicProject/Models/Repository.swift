@@ -17,6 +17,7 @@ struct Repository: Codable {
     let description: String
     let created_on: String
     let type: String
+    let website: String
     let owner : User
     
     func formatted_created_on() -> String {
